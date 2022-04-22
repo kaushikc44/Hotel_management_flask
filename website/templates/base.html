@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+    <style>
+
+        .grid-one{
+        display:grid;
+        }
+
+        .flex-content{
+        display:flex;
+        flex-direction: row;
+        align-item:center;
+        justify-content:center;
+
+
+        }
+
+        .flex-item{
+        padding:10px;
+        padding-right:30px;
+
+        }
+
+        a{
+        text-decoration:none;
+        color:white;
+        padding:5px;
+
+        font-size:20px;
+        }
+        a:hover{
+        background-color:white;
+        color:black;
+        border:1px solid white;
+        transition:0.6s ease;
+        }
+        .middle-text-content{
+        color:white;
+        font-size:100px;
+        padding-left:550px;
+        padding-top:160px;
+        font-family: "Lucida Console", "Courier New", monospace;
+
+        }
+        .middle-content{
+
+
+        }
+        .changecas{
+        color:#303030;
+        }
+
+</style>
+
+</head>
+<body>
+
+        <div class="main-container">
+            <div class="grid-one">
+                <div class="flex-content">
+                    <div class="flex-item make-it-green"><a href="/">Home</a></div>
+                    <div class="flex-item"><a href="/reservation">Reservation</a></div>
+                    <div class="flex-item"><a href="/reviews">Reviews</a></div>
+                    <div class="flex-item"><a href="/article">Article</a></div>
+                    <div class="flex-item"><a href="/auth/signup">SignUp</a></div>
+                    <div class="flex-item make-it-right"><a href="/auth/login">Login</a></div>
+                </div>
+            {% block content%}{% endblock %}
+            </div>
+
+        </div>
+
+
+
+        {% block content1 %} {% endblock %}

@@ -1,0 +1,154 @@
+
+{% extends "base.html" %}
+
+
+{% block content %}
+    <style>
+    	body{
+
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			background-image:url("/static/mal2.jpg");
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			font-family: 'Montserrat', sans-serif;
+			height: 100vh;
+			margin: -20px 0 50px;
+
+    	}
+    	.highlight{
+    	font-size:100px;
+    	color:#000000;
+    	}
+
+		.panel-container{
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		background:#fff;
+		border-radius:5%;
+		width:70%;
+		margin-left:70px;
+		background-image: linear-gradient(to top, #027c84, #009c8d, #00ba80, #4ed55c, #a8eb12);
+
+		}
+		.left{
+		display:flex;
+		flex-direction:column;
+		padding:20px;
+		margin:20px;
+		}
+		.inlined{
+		padding:10px;
+		}
+		.elem-group{
+		display:flex;
+		flex-direction:column;
+		padding:20px;
+		}
+		.inline{
+		padding:20px;
+		font-size:20px;
+		text-align:center;
+		color:white;
+		}
+
+		.subject1{
+		padding:2%;
+
+		margin:2%;
+		border-radius:5%;
+		}
+		.whiting{
+		color:white;
+		}
+		.button-25 {
+		  background-color: #36A9AE;
+		  background-image: linear-gradient(#37ADB2, #329CA0);
+		  border: 1px solid #2A8387;
+		  border-radius: 4px;
+		  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 1px;
+		  color: #FFFFFF;
+		  cursor: pointer;
+		  display: block;
+		  font-family: -apple-system,".SFNSDisplay-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
+		  font-size: 17px;
+		  line-height: 100%;
+		  margin: 0;
+		  outline: 0;
+		  padding: 11px 15px 12px;
+		  text-align: center;
+		  transition: box-shadow .05s ease-in-out,opacity .05s ease-in-out;
+		  user-select: none;
+		  -webkit-user-select: none;
+		  touch-action: manipulation;
+		  width: 100%;
+		}
+
+		.button-25:hover {
+		  box-shadow: rgba(255, 255, 255, 0.3) 0 0 2px inset, rgba(0, 0, 0, 0.4) 0 1px 2px;
+		  text-decoration: none;
+		  transition-duration: .15s, .15s;
+		}
+
+		.button-25:active {
+		  box-shadow: rgba(0, 0, 0, 0.15) 0 2px 4px inset, rgba(0, 0, 0, 0.4) 0 1px 1px;
+		}
+
+		.button-25:disabled {
+		  cursor: not-allowed;
+		  opacity: .6;
+		}
+
+		.button-25:disabled:active {
+		  pointer-events: none;
+		}
+
+		.button-25:disabled:hover {
+		  box-shadow: none;
+		}
+
+
+    </style>
+
+
+
+	<h1 class="highlight">Cas<span class="whiting">cade</span></h1>
+
+
+
+    <div class="panel-container">
+		<div class="left">
+
+
+			<div class="elem-group  inlined">
+				<label class="inline" for="checkin-date">Check-in Date</label>
+				<input  type="date" id="checkin-date" name="checkin" required>
+			</div>
+
+			<div class="elem-group inlined">
+			<label class="inline" for="checkout-date">Check-out Date</label>
+			<input type="date" id="checkout-date" name="checkout" required>
+			</div>
+
+
+			<div class="elem-group">
+				<label class="inline" for="room-selection">Select Room Preference</label>
+				<select id="room-selection" name="room_preference" required>
+					<option value="">Choose a Room from the List</option>
+					<option value="connecting">Connecting</option>
+					<option value="adjoining">Adjoining</option>
+					<option value="adjacent">Adjacent</option>
+				</select>
+			</div>
+
+			<button class="inlined subject1 button-25">Confirm Reservation</button>
+
+		</div>
+	<div>
+
+
+{% endblock %}
